@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let x = 1;
+    // And && operator can sometimes replace if (not recommended)
+    (x > 0) && alert( 'Greater than zero!' );
+    // Analogue:
+    if (x > 0) {
+        alert( 'Greater than zero!' );
+    }
+
+    // A double NOT !! is sometimes used for converting a value to boolean type:
+    alert( !!"non-empty string" ); // true (not recommended, use explicit type conversion)
+    alert( !!null ); // false (not recommended, use explicit type conversion)
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+    let arg = prompt("Enter a value?")
+    switch (arg) {
+        case '0':
+        case '1':
+            alert( 'One or zero' );
+            break;
+
+        case '2':
+            alert( 'Two' );
+            break;
+        // Let’s emphasize that the equality check is always strict.
+        // The values must be of the same type to match.
+        case 3:
+            alert( 'Never executes!' );
+            break;
+        default:
+            alert( 'An unknown value' )
+    }
+</script>
+</body>
+</html>
