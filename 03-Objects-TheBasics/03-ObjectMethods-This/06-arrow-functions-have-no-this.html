@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let user = {
+        firstName: "Ilya",
+        sayHi() {
+            let arrow = () => alert(this.firstName);
+            arrow();
+        }
+    };
+
+    user.sayHi(); // Ilya
+</script>
+</body>
+</html>

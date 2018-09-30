@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // integer properties are sorted
+    let codes = {
+        "49": "Germany",
+        "41": "Switzerland",
+        "44": "Great Britain",
+        // ..,
+        "1": "USA"
+    };
+
+    for(let code in codes) {
+        alert(code); // 1, 41, 44, 49
+    }
+
+    //--------------------------------------------------------
+
+    let user = {
+        name: "John",
+        surname: "Smith"
+    };
+    user.age = 25; // add one more
+
+    // non-integer properties are listed in the creation order
+    for (let prop in user) {
+        alert( prop ); // name, surname, age
+    }
+
+    //--------------------------------------------------------
+
+    let codes2 = {
+        "+49": "Germany",
+        "+41": "Switzerland",
+        "+44": "Great Britain",
+        // ..,
+        "+1": "USA"
+    };
+
+    for(let code in codes2) {
+        alert(code ); // 49, 41, 44, 1
+    }
+</script>
+</body>
+</html>

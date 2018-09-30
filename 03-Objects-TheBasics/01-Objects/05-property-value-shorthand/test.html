@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function makeUser(name, age) {
+        return {
+            name: name,
+            age: age,
+            // other propertites
+        }
+    }
+
+    let user = makeUser("John", 30);
+    alert(user.name);
+
+    // we can even make it shorter
+    function makeUser2(name, age) {
+        return {
+            name,
+            age,
+            // other propertites
+        }
+    }
+    let user2 = makeUser2("Kevin", 30);
+    alert(user2.name);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    const user = { // user is a reference
+        name: "John"
+    };
+
+    user.age = 25; // can change the property stored in the object
+    alert(user.age); // 25
+
+    // Error (can't reassign user, because user is a constant)
+    user = {
+        name: "Pete"
+    };
+</script>
+</body>
+</html>

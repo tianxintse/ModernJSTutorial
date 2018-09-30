@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let user = { name: "John" };
+
+    let admin = user; // copy the reference
+    alert(user.name);
+    admin.name = "Pete";
+    alert(user.name);
+</script>
+</body>
+</html>

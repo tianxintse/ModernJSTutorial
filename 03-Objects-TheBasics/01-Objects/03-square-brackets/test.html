@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let user = {
+        name: "John",
+        age: 30,
+        "likes birds": true,
+    };
+    alert(user["likes birds"]);
+    user["likes birds"] = false;
+    alert(user["likes birds"]);
+
+    let key = "likes birds";
+    alert(user[key]);
+
+    let key2 = prompt("enter a key", "");
+    alert(user[key2]);
+</script>
+</body>
+</html>

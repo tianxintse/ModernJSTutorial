@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let sym = Symbol.for("name");
+    let sym2 = Symbol.for("id");
+
+    // get name from symbol
+    alert( Symbol.keyFor(sym) ); // name
+    alert( Symbol.keyFor(sym2) ); // id
+
+    alert( Symbol.keyFor(Symbol.for("name2")) ); // name, global symbol
+    alert( Symbol.keyFor(Symbol("name3")) ); // undefined, the argument isn't a global symbol
+</script>
+</body>
+</html>

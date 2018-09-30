@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let a = {};
+    let b = a; // copy the reference
+
+    alert( a == b ); // true, both variables reference the same object
+    alert( a === b ); // true
+
+    let a2 = {};
+    let b2 = {}; // two independent objects
+
+    alert( a2 === b2 ); // false
+</script>
+</body>
+</html>

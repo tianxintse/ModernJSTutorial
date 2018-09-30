@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+    // A value of this type can be created using Symbol()
+    let id1 = Symbol();
+
+    // We can also give symbol a description (also called a symbol name), mostly useful for debugging purposes
+    let id2 = Symbol("id");
+
+    let id3 = Symbol("id");
+    let id4 = Symbol("id");
+
+    alert(id3 === id4); // false
+
+    // alert(id4); // TypeError: Cannot convert a Symbol value to a string
+    alert(id4.toString()); // Symbol(id), now it works
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let fruit = prompt("Which fruit to buy?", "apple");
+    let bag = {
+        [fruit + "Computers"]: 5, // the name of the property is taken from the variable fruit
+    };
+    alert(bag[fruit + "Computers"]);
+</script>
+</body>
+</html>

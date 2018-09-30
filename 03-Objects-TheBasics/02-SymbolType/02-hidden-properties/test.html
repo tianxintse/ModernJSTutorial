@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let user = { name: "John" };
+    let id = Symbol("id");
+
+    user[id] = "ID Value";
+    alert(user[id]);
+
+    // If we want to use a symbol in an object literal, we need square brackets.
+    let id2 = Symbol("id");
+
+    let user2 = {
+        name: "John",
+        [id2]: 123 // not just "id: 123"
+    };
+    alert(user2[id2]);
+</script>
+</body>
+</html>
