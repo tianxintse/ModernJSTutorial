@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let obj = {
+        // toString handles all conversions in the absence of other methods
+        toString() {
+            return true;
+        },
+    };
+
+    alert(obj + 2); // 3 (ToPrimitive returned boolean, not string => ToNumber)
+</script>
+</body>
+</html>
