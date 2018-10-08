@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // Luckily, all modern browsers (IE10- requires the additional library Intl.JS)
+    // support the internationalization standard ECMA 402. It provides a special
+    // method to compare strings in different languages, following their rules.
+
+    // The call str.localeCompare(str2):
+    // * Returns 1 if str is greater than str2 according to the language rules.
+    // * Returns -1 if str is less than str2.
+    // * Returns 0 if they are equal.
+    alert( 'Österreich'.localeCompare('Zealand') ); // -1
+</script>
+</body>
+</html>

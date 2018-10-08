@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let str = 'Widget with id';
+
+    /*alert( str.indexOf('Widget') ); // 0, because 'Widget' is found at the beginning
+    alert( str.indexOf('widget') ); // -1, not found, the search is case-sensitive
+    alert( str.indexOf("id") ); // 1, "id" is found at the position 1 (..idget with id)*/
+
+    // alert( str.indexOf('id', 2) ) // 12
+
+    str = 'As sly as a fox, as strong as an ox';
+    let target = 'as'; // let's look for it
+    let pos = -1;
+    while ((pos = str.indexOf(target, pos + 1)) !== -1) {
+        alert(pos);
+    }
+</script>
+</body>
+</html>

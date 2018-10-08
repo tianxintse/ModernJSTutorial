@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // This is almost the same as slice, but it allows start to be greater than end.
+    let str = "stringify";
+
+    // these are same for substring
+    alert( str.substring(2, 6) ); // "ring"
+    alert( str.substring(6, 2) ); // "ring"
+
+    // ...but not for slice:
+    alert( str.slice(2, 6) ); // "ring" (the same)
+    alert( str.slice(6, 2) ); // "" (an empty string)
+</script>
+</body>
+</html>

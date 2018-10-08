@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    alert( ~2 ); // -3, the same as -(2+1)
+    alert( ~1 ); // -2, the same as -(1+1)
+    alert( ~0 ); // -1, the same as -(0+1)
+    alert( ~-1 ); // 0, the same as -(-1+1)
+
+    // As we can see, ~n is zero only if n == -1.
+    // So, the test if ( ~str.indexOf("...") ) is
+    // truthy that the result of indexOf is not -1.
+    // In other words, when there is a match.
+    // People use it to shorten indexOf checks:
+    let str = "Widget";
+
+    if (~str.indexOf("Widget")) {
+        alert("Found it!");
+    }
+</script>
+</body>
+</html>
