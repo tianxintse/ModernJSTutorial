@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let arryaLike = { // has indexes and length => array-like
+        0: "Hello",
+        1: "World",
+        length: 2,
+    };
+
+    // Error (no Symbol.iterator)
+    for (let item of arrayLike) {}
+
+    // What do they have in common? Both iterables and array-likes are usually not arrays,
+    // they don’t have push, pop etc. That’s rather inconvenient if we have such an object
+    // and want to work with it as with an array.
+
+</script>
+</body>
+</html>

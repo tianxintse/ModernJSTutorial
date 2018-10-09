@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // This code gets a string iterator and calls it “manually”:
+    let str = "Hello";
+    let iterator = str[Symbol.iterator]();
+    while (true) {
+        let result = iterator.next();
+        if (result.done) break;
+        alert(result.value);
+    }
+
+</script>
+</body>
+</html>

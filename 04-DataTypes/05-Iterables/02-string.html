@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // String is iterable
+    for (let char of "test") {
+        alert(char);
+    }
+
+    let str = '𝒳😂';
+    for (let char of str) {
+        alert( char ); // 𝒳, and then 😂
+    }
+</script>
+</body>
+</html>
