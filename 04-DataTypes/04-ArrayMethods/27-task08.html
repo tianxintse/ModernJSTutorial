@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let john = { name: "John", age: 25 };
+    let pete = { name: "Pete", age: 30 };
+    let mary = { name: "Mary", age: 28 };
+
+    let arr = [ john, pete, mary ];
+
+    function sortByName(arr) {
+        arr.sort((a, b) => a.name > b.name);
+    }
+
+    sortByName(arr);
+
+    // now: [john, mary, pete]
+    alert(arr[1].name); // Mary
+</script>
+</body>
+</html>

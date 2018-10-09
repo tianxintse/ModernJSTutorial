@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- add mocha css, to show results -->
+    <link href="https://cdn.bootcss.com/mocha/5.2.0/mocha.min.css" rel="stylesheet">
+    <!-- add mocha framework code -->
+    <script src="https://cdn.bootcss.com/mocha/5.2.0/mocha.min.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdn.bootcss.com/chai/4.1.2/chai.min.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+<body>
+<script>
+    "use strict";
+
+    function Calculator() {
+        this.methods = {
+            "+": (a, b) => a + b,
+            "-": (a, b) => a - b,
+        };
+
+        this.calculate = function(str) {
+            let split = str.split(" ");
+            let a = +split[0];
+            let op = split[1];
+            let b = +split[2];
+
+            if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+                return NaN;
+            }
+
+            return this.methods[op](a, b);
+        };
+
+        this.addMethod = function(name, func) {
+            this.methods[name] = func;
+        };
+    }
+/*
+    let calc = new Calculator();
+    alert(calc.calculate("3 + 7"));
+    alert(calc.calculate("3 - 7"));
+
+    calc.addMethod("*", (a, b) => a * b);
+    calc.addMethod("/", (a, b) => a / b);
+    calc.addMethod("**", (a, b) => a ** b);
+
+    alert(calc.calculate("2 ** 3"));
+    alert(calc.calculate("2 * 3"));
+    alert(calc.calculate("2 / 3"));*/
+</script>
+<!-- the script with tests (describe, it...) -->
+<script src="10-test.js"></script>
+
+<!-- the element with id="mocha" will contain test results -->
+<div id="mocha"></div>
+
+<!-- run tests! -->
+<script>
+    mocha.run();
+</script>
+</body>
+</html>

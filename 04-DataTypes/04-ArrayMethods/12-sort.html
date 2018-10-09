@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    /*function compare(a, b) {
+        if (a > b) return 1;
+        if (a === b) return 0;
+        if (a < b) return -1;
+    }
+
+    let arr = [1, 2, 15];
+    arr.sort(compare);
+    alert(arr);*/
+
+    // Actually, a comparison function is only required to
+    // return a positive number to say “greater” and a
+    // negative number to say “less”.
+    // That allows to write shorter functions:
+    let arr = [ 1, 22, 15 ];
+    arr.sort((a, b) => a - b);
+    alert(arr);  // 1, 2, 15
+</script>
+</body>
+</html>

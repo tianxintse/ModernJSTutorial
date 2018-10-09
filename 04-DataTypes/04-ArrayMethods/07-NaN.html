@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // a very minor difference of includes is that it
+    // correctly handles NaN, unlike indexOf/lastIndexOf:
+    let arr = [NaN];
+    alert(arr.indexOf(NaN)); // -1 (should be 0, but === equality doesn't work for NaN)
+    alert(arr.includes(NaN)); // true
+</script>
+</body>
+</html>
