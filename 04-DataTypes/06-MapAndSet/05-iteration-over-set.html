@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let set = new Set(["oranges", "apples", "bananas"]);
+
+    for (let value of set) alert(value);
+
+    // the same with forEach:
+    set.forEach((value, valueAgain, set) => {
+        alert(value);
+    });
+</script>
+</body>
+</html>

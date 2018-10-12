@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+    };
+
+    function sumSalaries(obj) {
+        let sum = 0;
+        for (let v of Object.values(obj)) {
+            sum += v;
+        }
+        return sum;
+    }
+
+    alert( sumSalaries(salaries) ); // 650
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let map = new Map([
+        ['1', 'str1'],
+        [1, 'num1'],
+        [true, 'bool1']
+    ]);
+
+    // There is a built-in method Object.entries(obj) that returns
+    // an array of key/value pairs for an object exactly in that
+    // format.
+    // So we can initialize a map from an object like this:
+    let map2 = new Map(Object.entries({
+        name: 'John',
+        age: 30,
+    }));
+</script>
+</body>
+</html>
