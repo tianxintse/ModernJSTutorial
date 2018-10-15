@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let room = {
+        number: 23,
+        toJSON() {
+            return this.number;
+        }
+    };
+
+    let meetup = {
+        title: "Conference",
+        room
+    };
+
+    alert(JSON.stringify(room));
+    alert(JSON.stringify(meetup));
+</script>
+</body>
+</html>

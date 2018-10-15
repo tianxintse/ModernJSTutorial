@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let start = Date.now();
+    // do the job
+    for (let i = 0; i < 100000; i++) {
+        let doSomething = i ** 3;
+    }
+    let end = Date.now();
+    alert(`The loop took ${end - start} ms`);
+</script>
+</body>
+</html>
