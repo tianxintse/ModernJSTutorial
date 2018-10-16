@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // In the browser, the value of this in the global area is window:
+    alert(this === window);
+
+    // When a function with this is called in non-strict mode, it gets the global object as this:
+    // not in strict mode (!)
+    function f() {
+        alert(this); // [object Window]
+    }
+
+    f(); // called without an object
+</script>
+</body>
+</html>

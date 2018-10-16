@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // Provides access to global Function Declarations and var variables.
+    // We can read and write them using its properties, for instance:
+
+    var phrase = "asdf";
+    function sayHi() {
+        alert(phrase);
+    }
+
+    alert(window.phrase);
+    alert(window.sayHi);
+    window.test = 5;
+    alert(test);
+
+    // But the global object does not have variables declared with let/const!
+    let user = "John";
+    alert(user); // John
+    alert(window.user); // undefined, don't have let
+    alert("user" in window); // false
+</script>
+</body>
+</html>
