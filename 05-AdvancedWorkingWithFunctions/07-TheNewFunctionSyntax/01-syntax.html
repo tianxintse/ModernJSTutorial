@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // function parameters (or, more precisely, names for them) go first,
+    // and the body is last. All arguments are strings.
+
+    // It’s easier to understand by looking at an example. Here’s a function with two arguments:
+    let sum = new Function('a', 'b', 'return a + b');
+    alert(sum(1, 2));
+
+    // If there are no arguments, then there’s only a single argument, the function body:
+    let sayHi = new Function('alert("Hello")');
+    sayHi();
+</script>
+</body>
+</html>

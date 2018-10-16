@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // https://javascript.info/new-function#closure
+
+    // when a function is created using new Function,
+    // its [[Environment]] references not the current
+    // Lexical Environment, but instead the global one.
+    /*function getFunc() {
+        let value = "test";
+        let func = new Function('alert(value)');
+        return func;
+    }
+    getFunc()(); // error: value is not defined*/
+
+    // Compare it with the regular behavior:
+    function getFunc2() {
+        let value = "test";
+        let func = function() { alert(value); };
+        return func;
+    }
+    getFunc2()(); // "test", from the Lexical Environment of getFunc
+</script>
+</body>
+</html>
