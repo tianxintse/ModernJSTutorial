@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // example 1
+    /*if (true) {
+        var test = "true";
+    }
+    alert(test); // true*/
+
+    // example 2
+    /*for (var i = 0; i < 10; i++) {
+        // ...
+    }
+    alert(i); // 10, "i" is visible after loop, it's a global variable*/
+
+    // example 3
+    // If a code block is inside a function, then var becomes a function-level variable:
+    function sayHi() {
+        if (true) {
+            var phrase = "Hello";
+        }
+        alert(phrase); // works
+    }
+    sayHi();
+    alert(phrase); // Error: phrase is not defined
+</script>
+</body>
+</html>

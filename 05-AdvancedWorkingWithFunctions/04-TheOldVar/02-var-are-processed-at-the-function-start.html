@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // var variables are defined from the beginning of
+    // the function, no matter where the definition is
+    function sayHi() {
+        phrase = "Hello";
+        alert(phrase);
+        var phrase;
+    }
+    sayHi();
+</script>
+</body>
+</html>
