@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+/*
+    function sayHi() {
+        alert('Hello');
+    }
+    setTimeout(sayHi, 1000);
+
+    // with arguments
+    function sayHi2(phrase, who) {
+        alert( phrase + ', ' + who );
+    }
+    setTimeout(sayHi2, 2000, "Hello", "John"); // Hello, John
+*/
+
+    // If the first argument is a string, then JavaScript creates a function from it.
+    // setTimeout("alert('Hello')", 1000);
+
+    // But using strings is not recommended, use functions instead of them, like this:
+    setTimeout(() => alert('Hello'), 1000);
+</script>
+</body>
+</html>

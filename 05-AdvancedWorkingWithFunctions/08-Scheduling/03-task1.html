@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    function printNumbers1(from, to) {
+        let n = from;
+        let t = setInterval(() => {
+            console.log(n++);
+            if (n > to)
+                clearInterval(t);
+        }, 1000);
+    }
+    // printNumbers1(1, 10);
+
+    function printNumbers2(from, to) {
+        if (from <= to) {
+            console.log(from);
+            setTimeout(printNumbers2, 1000, from + 1, to);
+        }
+    }
+    printNumbers2(1, 10);
+</script>
+</body>
+</html>
