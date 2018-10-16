@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // a function’s name is accessible as the “name” property:
+    /*function sayHi() {
+        alert("Hi");
+    }
+    alert(sayHi.name);*/
+
+    // What’s more funny, the name-assigning logic is smart.
+    // It also assigns the correct name to functions that are
+    // used in assignments:
+    /*let sayHello = function() {
+        alert("Hello");
+    };
+    alert(sayHello.name);*/
+
+    // It also works if the assignment is done via a default value:
+    /*function f(sayHi = function() {}) {
+        alert(sayHi.name); // sayHi (works!)
+    }
+    f();*/
+
+    // Object methods have names too:
+    /*let user = {
+        sayHi() {
+            // ...
+        },
+        sayBye: function() {
+            // ...
+        }
+    };
+    alert(user.sayHi.name); // sayHi
+    alert(user.sayBye.name); // sayBye*/
+
+    // There’s no magic though. There are cases when there’s
+    // no way to figure out the right name. In that case,
+    // the name property is empty, like here:
+    // function created inside array
+    let arr = [function() {}];
+    alert( arr[0].name ); // <empty string>
+    // the engine has no way to set up the right name, so there is none
+</script>
+</body>
+</html>

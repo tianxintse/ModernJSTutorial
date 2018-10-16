@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    function makeCounter() {
+        let count = 0;
+        function counter() {
+            count++;
+        }
+        counter.set = function(value) {
+            count = value;
+        };
+        counter.decrease = function() {
+            count--;
+        };
+        counter.show = function() {
+            alert(count);
+        };
+        return counter;
+    }
+
+    let counter = makeCounter();
+    counter();
+    counter.show();
+    counter.set(10);
+    counter.show();
+    counter.decrease();
+    counter.show();
+</script>
+</body>
+</html>
