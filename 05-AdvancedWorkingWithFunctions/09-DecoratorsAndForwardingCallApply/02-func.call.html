@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+/*
+    function sayHi() {
+        alert(this.name);
+    }
+
+    function say(phrase) {
+        alert(this.name + ': ' + phrase);
+    }
+
+    let user = { name: "John" };
+    let admin = { name: "Admin" };
+
+    sayHi.call(user);
+    sayHi.call(admin);
+    say.call(user, "Hello");
+    */
+
+    let worker = {
+        someMethod() {
+            return 1;
+        },
+        slow(x) {
+            alert("Called with " + x);
+            return x * this.someMethod(); // (*)
+        }
+    };
+
+    function cachingDecorator(func) {
+        let cache = new Map();
+        return function(x) {
+            if (cache.has(x)) {
+                return cache.get(x);
+            }
+            let result = func.call(this, x);
+            cache.set(x, result);
+            return result;
+        }
+    }
+
+    worker.slow = cachingDecorator(worker.slow);
+
+    alert(worker.slow(2));
+    alert(worker.slow(2));
+</script>
+</body>
+</html>
