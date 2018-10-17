@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let group = {
+        title: "Our Group",
+        students: ["John", "Pete", "Alice"],
+
+        showList() {
+            this.students.forEach(
+                student => alert(this.title + ': ' + student)
+            );
+        },
+
+        showList2() {
+            this.students.forEach(function() {
+                alert(this.title + ': ' + student);
+            });
+        }
+    };
+    // Here in forEach, the arrow function is used,
+    // so this.title in it is exactly the same as in
+    // the outer method showList. That is: group.title.
+    group.showList();
+
+    // The error occurs because forEach runs functions
+    // with this=undefined by default, so the attempt
+    // to access undefined.title is made.
+    group.showList2();
+</script>
+</body>
+</html>
