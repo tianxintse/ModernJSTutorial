@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // The exotic bound function object returned by f.bind(...)
+    // remembers the context (and arguments if provided) only at
+    // creation time.
+
+    // A function cannot be re-bound.
+    function f() {
+        alert(this.name);
+    }
+
+    f = f.bind( {name: "John"} ).bind( {name: "Ann" } );
+
+    f();
+</script>
+</body>
+</html>

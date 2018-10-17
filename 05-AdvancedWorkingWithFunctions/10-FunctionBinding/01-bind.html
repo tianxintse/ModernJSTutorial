@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+/*
+
+    let user = {
+        firstName: "John"
+    };
+
+    function func() {
+        alert(this.firstName);
+    }
+    let funcUser = func.bind(user);
+    funcUser();
+
+    function func2(phrase) {
+        alert(phrase + ', ' + this.firstName);
+    }
+    let funcUser2 = func2.bind(user);
+    funcUser2('Hello');
+*/
+
+    // try with an object method:
+    let user = {
+        firstName: "John",
+        sayHi() {
+            alert(`Hello, ${this.firstName}!`);
+        }
+    };
+    let sayHi = user.sayHi.bind(user);
+    sayHi();
+    setTimeout(sayHi, 1000);
+</script>
+</body>
+</html>
