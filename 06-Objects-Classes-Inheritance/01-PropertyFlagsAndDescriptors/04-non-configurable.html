@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let descriptor = Object.getOwnPropertyDescriptor(Math, 'PI');
+    alert(JSON.stringify(descriptor, null, 2));
+
+    // Making a property non-configurable is a one-way road.
+    // We cannot change it back, because defineProperty doesn’t
+    // work on non-configurable properties.
+    let user = {};
+    Object.defineProperty(user, 'name', {
+        value: 'John',
+        writable: false,
+        configurable: false
+    });
+    Object.defineProperty(user, 'name', {writable: true}); // Error
+</script>
+</body>
+</html>

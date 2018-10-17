@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+/*
+    let user = {
+        name: "John"
+    };
+
+    let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+    alert(JSON.stringify(descriptor, null, 4));
+*/
+
+    let user = {};
+    Object.defineProperty(user, 'name', {
+        value: 'John'
+    });
+    let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+    alert(JSON.stringify(descriptor, null, 2));
+</script>
+</body>
+</html>

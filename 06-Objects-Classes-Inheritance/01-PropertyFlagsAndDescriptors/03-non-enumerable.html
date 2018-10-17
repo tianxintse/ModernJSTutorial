@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let user = {
+        name: 'John',
+        toString() {
+            return this.name;
+        }
+    };
+
+    Object.defineProperty(user, 'toString', {
+        enumerable: false
+    });
+
+    for (let key in user)
+        alert(key);
+
+    // Non-enumerable properties are also excluded from Object.keys:
+    alert(Object.keys(user));
+</script>
+</body>
+</html>

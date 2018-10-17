@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let user = {};
+    Object.defineProperties(user, {
+        name: { value: 'John', writable: true, enumerable: true, configurable: true},
+        surname: { value: 'Smith', writable: true, enumerable: true, configurable: true}
+    });
+    alert(JSON.stringify(user, null, 2));
+</script>
+</body>
+</html>

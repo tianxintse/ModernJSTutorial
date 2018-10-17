@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+/*
+    let user = {
+        name: "John"
+    };
+
+    Object.defineProperty(user, 'name', {
+        writable: false
+    });
+
+    user.name = '2123';
+*/
+
+    let user = {};
+    Object.defineProperty(user, 'name', {
+        value: 'Pete',
+        enumerable: true,
+        configurable: true
+    });
+
+    alert(user.name);
+    user.name = 'Alice';
+
+</script>
+</body>
+</html>
