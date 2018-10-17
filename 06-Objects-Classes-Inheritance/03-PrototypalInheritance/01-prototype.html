@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let animal = {
+        eats: true,
+        walk() {
+            alert('Animal walk');
+        }
+    };
+    let rabbit = {
+        jumps: true,
+        __proto__: animal
+    };
+    let longEar = {
+        earLength: 10,
+        __proto__: rabbit
+    };
+    // alert(rabbit.eats);
+    // alert(rabbit.jumps);
+    // rabbit.walk();
+    longEar.walk();
+    alert(longEar.jumps);
+</script>
+</body>
+</html>
