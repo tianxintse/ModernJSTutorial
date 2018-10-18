@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // Here’s a prototype-based class User:
+    /*function User(name) {
+        this.name = name;
+    }
+
+    User.prototype.sayHi = function() {
+        alert(this.name);
+    };
+
+    let user = new User("John");
+    user.sayHi();*/
+
+
+    // And that’s the same using class syntax:
+    class User {
+        constructor(name) {
+            this.name = name;
+        }
+
+        sayHi() {
+            alert(this.name);
+        }
+    }
+
+    let user = new User('John');
+    user.sayHi();
+
+    // proof: User is the "constructor" function
+    alert(User === User.prototype.constructor); // true
+
+    // proof: there are two methods in its "prototype"
+    alert(Object.getOwnPropertyNames(User.prototype)); // constructor, sayHi
+</script>
+</body>
+</html>
