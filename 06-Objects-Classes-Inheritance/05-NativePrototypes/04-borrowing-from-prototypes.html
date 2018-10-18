@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    function showArgs() {
+        // alert([].join.call(arguments, " - "));
+        // more efficient:
+        alert(Array.prototype.join.call(arguments, ' - '));
+    }
+
+    showArgs('John', 'Pete', 'Alice');
+</script>
+</body>
+</html>

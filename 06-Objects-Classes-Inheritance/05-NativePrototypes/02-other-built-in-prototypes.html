@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    /*let arr = [1, 2 ,3];
+    alert(arr.__proto__ === Array.prototype); // true
+    alert(arr.__proto__.__proto__ === Object.prototype); // true
+    alert(arr.__proto__.__proto__.__proto__); // null*/
+
+    function f() {}
+
+    alert(f.__proto__ === Function.prototype); // true
+    alert(f.__proto__.__proto__ === Object.prototype); // true, inherit from objects
+</script>
+</body>
+</html>
