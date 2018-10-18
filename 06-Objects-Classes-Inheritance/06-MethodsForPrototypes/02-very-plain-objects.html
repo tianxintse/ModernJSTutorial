@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // let obj = {};
+    let obj = Object.create(null);
+
+    let key = prompt("What's the key?", "__proto__");
+    obj[key] = "some value";
+    alert(obj[key]);
+</script>
+</body>
+</html>

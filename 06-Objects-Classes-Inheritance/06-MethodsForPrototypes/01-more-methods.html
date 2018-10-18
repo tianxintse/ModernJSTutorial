@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let animal = {
+        eats: true
+    };
+
+    /*let rabbit = Object.create(animal);
+    alert(rabbit.eats);
+    alert(Object.getPrototypeOf(rabbit) === animal);
+    Object.setPrototypeOf(rabbit, {});*/
+
+    // Object.create has an optional second argument: property descriptors.
+    // We can provide additional properties to the new object there, like this:
+    let rabbit = Object.create(animal, {
+        jumps: {
+            value: true
+        }
+    });
+    alert(rabbit.jumps);
+    alert(rabbit.eats);
+
+    // We can use Object.create to perform an object cloning more powerful than copying properties in for..in:
+    let clone = Object.create(Object.getPrototypeOf(rabbit), Object.getOwnPropertyDescriptors(rabbit))
+    alert(clone.eats);
+    alert(clone.jumps);
+</script>
+</body>
+</html>
