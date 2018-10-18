@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let animal = {
+        name: "Animal",
+        eat() {         // [[HomeObject]] == animal
+            alert(`${this.name} eats.`);
+        }
+    };
+
+    let rabbit = {
+        __proto__: animal,
+        name: "Rabbit",
+        eat() {         // [[HomeObject]] == rabbit
+            super.eat();
+        }
+    };
+
+    let longEar = {
+        __proto__: rabbit,
+        name: "Long Ear",
+        eat() {         // [[HomeObject]] == longEar
+            super.eat();
+        }
+    };
+
+    longEar.eat();  // Long Ear eats.
+</script>
+</body>
+</html>
