@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // It returns true if obj belongs to the Class (or a class inheriting from it).
+    /*class Rabbit {}
+    let rabbit = new Rabbit();
+    alert(rabbit instanceof Rabbit);*/
+
+    // It also works with constructor functions
+    /*function Dog() {}
+    alert(new Dog() instanceof Dog); // true*/
+
+    // And with built-in classes like Array:
+    /*let arr = [1, 2, 3];
+    alert(arr instanceof Array); // true
+    alert(arr instanceof Object); // true*/
+
+    // If there’s a static method Symbol.hasInstance, then use it. Like this:
+    class Animal {
+        static [Symbol.hasInstance](obj) {
+            if (obj.canEat) return true;
+        }
+    }
+
+    let obj = { canEat: true };
+    alert(obj instanceof Animal); // true: Animal[Symbol.hasInstance](obj) is called
+</script>
+</body>
+</html>

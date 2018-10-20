@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let user = {
+        [Symbol.toStringTag]: "User"
+    };
+
+    alert({}.toString.call(user)); // [Object User]
+
+    // toStringTag for the envinronment-specific object and class:
+    alert( window[Symbol.toStringTag]); // window
+    alert( XMLHttpRequest.prototype[Symbol.toStringTag] ); // XMLHttpRequest
+
+    alert( {}.toString.call(window) ); // [object Window]
+    alert( {}.toString.call(new XMLHttpRequest()) ); // [object XMLHttpRequest]
+</script>
+</body>
+</html>
