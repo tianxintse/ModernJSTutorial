@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <td>one</td><td>two</td>
+        </tr>
+        <tr>
+            <td>three</td><td>four</td>
+        </tr>
+    </table>
+    <script>
+        let table = document.querySelector("#table");
+        alert(table.rows[0].cells[1].innerHTML); // "two"
+    </script>
+</body>
+</html>

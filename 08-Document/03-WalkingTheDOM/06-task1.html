@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div>Users:</div>
+    <ul>
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+    <script>
+        "use strict";
+
+        alert(document.body.firstElementChild); // div
+        alert(document.body.firstElementChild.nextElementSibling); // ul
+        alert(document.body.firstElementChild.nextElementSibling.children[1]); // li (with Pete)
+    </script>
+</body>
+</html>

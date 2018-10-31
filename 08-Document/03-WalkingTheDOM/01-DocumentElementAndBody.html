@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        alert("From HEAD: " + document.body); // null, there's no <body> yet
+    </script>
+</head>
+<body>
+<script>
+    alert("From BODY: " + document.body); // HTMLBodyElement, now it exists
+</script>
+</body>
+</html>
