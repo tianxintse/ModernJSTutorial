@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    /*try {
+        alert('Start of try runs');  // (1) <--
+        // ...no errors here
+        alert('End of try runs');   // (2) <--
+    } catch (err) {
+        alert('Catch is ignored, because there are no errors'); // (3)
+    }
+    alert("...Then the execution continues");*/
+
+    try {
+        alert('Start of try runs');  // (1) <--
+        lalala; // error, variable is not defined!
+        alert('End of try (never reached)');  // (2)
+    } catch(err) {
+        alert(`Error has occured!`); // (3) <--
+    }
+    alert("...Then the execution continues");
+</script>
+</body>
+</html>

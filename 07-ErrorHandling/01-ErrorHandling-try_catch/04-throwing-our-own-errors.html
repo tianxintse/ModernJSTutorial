@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    /*let error = new Error("Things happen o_O");
+    alert(error.name);
+    alert(error.message);*/
+
+    /*try {
+        JSON.parse("{ bad json }");
+    } catch (e) {
+        alert(e.name);
+        alert(e.message);
+    }*/
+
+    let json = '{ "age": 30 }';
+    try {
+        let user = JSON.parse(json);
+        if (!user.name) {
+            throw new SyntaxError("Incomplete data: no name");
+        }
+        alert(user.name);
+    } catch (e) {
+        alert("JSON error: " + e.message);
+    }
+</script>
+</body>
+</html>
