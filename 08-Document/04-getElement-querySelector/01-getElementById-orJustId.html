@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="elem">
+    <div id="elem-content">Element</div>
+</div>
+<script>
+    "use strict";
+
+    /*// us id directly
+    alert(elem);
+    alert(window.elem);
+    alert(window['elem-content']);*/
+
+    // use document.getElementById(id)
+    let elem = document.getElementById('elem');
+    elem.style.backgroundColor = 'red';
+</script>
+</body>
+</html>

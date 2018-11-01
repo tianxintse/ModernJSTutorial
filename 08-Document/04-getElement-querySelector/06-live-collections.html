@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+
+All methods "getElementsBy*" return a live collection. Such collections always reflect
+the current state of the document and “auto-update” when it changes.
+
+In the example below, there are two scripts.
+
+- The first one creates a reference to the collection of <div>. As of now, it’s length is 1.
+- The second scripts runs after the browser meets one more <div>, so it’s length is 2.
+
+-->
+
+<!--<div>First div</div>
+
+<script>
+    let divs = document.getElementsByTagName('div');
+    alert(divs.length); // 1
+</script>
+
+<div>Second div</div>
+
+<script>
+    alert(divs.length); // 2
+</script>-->
+
+<!--In contrast, querySelectorAll returns a static collection. It’s like a fixed array of elements.
+
+If we use it instead, then both scripts output 1:-->
+
+<div>First div</div>
+
+<script>
+    let divs = document.querySelectorAll('div');
+    alert(divs.length); // 1
+</script>
+
+<div>Second div</div>
+
+<script>
+    alert(divs.length); // 1
+</script>
+
+</body>
+</html>

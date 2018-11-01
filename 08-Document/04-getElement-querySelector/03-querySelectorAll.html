@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>The</li>
+    <li>test</li>
+</ul>
+<ul>
+    <li>has</li>
+    <li>passed</li>
+</ul>
+<script>
+    "use strict";
+
+    let elements = document.querySelectorAll('ul > li:last-child');
+
+    for (let elem of elements) {
+        alert(elem.innerHTML);
+    }
+</script>
+</body>
+</html>
