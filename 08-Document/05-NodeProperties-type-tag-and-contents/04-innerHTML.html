@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>A paragraph</p>
+    <div>A div</div>
+    <script>
+        alert(document.body.innerHTML);
+        document.body.innerHTML = 'The new BODY!';
+
+        // We can try to insert invalid HTML, the browser will fix our errors:
+        document.body.innerHTML = '<b>test'; // forgot to close the tag
+        alert(document.body.innerHTML); // <b>test</b> (fixed)
+    </script>
+</body>
+</html>

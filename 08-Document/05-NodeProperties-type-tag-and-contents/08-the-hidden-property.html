@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>Both divs below are hidden</div>
+
+    <div hidden>With the attribute "hidden"</div>
+
+    <div id="elem">JavaScript assigned the property "hidden"</div>
+
+    <script>
+        elem.hidden = true;
+    </script>
+
+    <div id="blink">A blinking element</div>
+    <script>
+        let blink = document.querySelector('#blink');
+        setInterval(() => blink.hidden = !blink.hidden, 500);
+    </script>
+</body>
+</html>
