@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="test" something="non-standard">
+<script>
+    "use strict";
+
+    /*alert(document.body.id); // test
+    alert(document.body.something); // undefined
+    alert(document.body.getAttribute('something')); // non-standard*/
+
+    alert(test.getAttribute('About'));
+    test.setAttribute('Test', 123);
+    alert(test.outerHTML);
+    for (let attr of test.attributes) {
+        alert(`${attr.name} = ${attr.value}`);
+    }
+</script>
+</body>
+</html>

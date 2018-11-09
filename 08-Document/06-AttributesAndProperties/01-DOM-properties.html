@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    Element.prototype.sayHi = function() {
+        alert(`Hello, I'm ${this.tagName}`);
+    };
+
+    document.documentElement.sayHi();
+    document.body.sayHi();
+</script>
+</body>
+</html>

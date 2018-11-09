@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input>
+<script>
+    "use strict";
+
+    let input = document.querySelector('input');
+
+    // attribute => property
+    input.setAttribute('id', 'id');
+    alert(input.id);
+
+    // property => attribute
+    input.id = 'newID';
+    alert(input.getAttribute('id'));
+
+    // attribute => property
+    input.setAttribute('value', 'test');
+    alert(input.value);
+
+    // Not property => attribute
+    input.value = 'newValue';
+    alert(input.getAttribute('value'));
+</script>
+</body>
+</html>
