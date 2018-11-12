@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container"></div>
+<script>
+    "use strict";
+
+    function createTree(container, obj) {
+        // container.append(createTreeDown(obj));
+        container.innerHTML = createInnerHTMLDown(obj);
+    }
+
+    function createTreeDown(obj) {
+        if (!Object.keys(obj).length) return; // 判断对象是否有子对象，无则返回undefined
+        let ul = document.createElement("ul"); // 有的话就创建一个无序列表来保存这些子对象的名字
+        for (let key in obj) { // 遍历子对象
+            let li = document.createElement("li"); // 为每个子对象创建一个li
+            li.innerHTML = key; // 将li的值赋为子对象的名字
+            let childrenUl = createTreeDown(obj[key]); // 递归地创建子列表
+            if (childrenUl) { // 如果存在子列表则添加到当前li作为下一级列表
+                li.append(childrenUl);
+            }
+            ul.append(li); // 添加列表项
+        }
+        return ul; // 返回列表
+    }
+
+    function createInnerHTMLDown(obj) {
+        if (!Object.keys(obj).length)
+            return "";
+        let ul = "<ul>";
+        for (let key in obj) {
+            ul += "<li>" + key + createInnerHTMLDown(obj[key]) + "</li>";
+        }
+        ul += "</ul>";
+        return ul;
+    }
+
+    let data = {
+        "Fish": {
+            "trout": {},
+            "salmon": {}
+        },
+
+        "Tree": {
+            "Huge": {
+                "sequoia": {},
+                "oak": {}
+            },
+            "Flowering": {
+                "redbud": {},
+                "magnolia": {}
+            }
+        }
+    };
+
+    let container = document.getElementById("container");
+    createTree(container, data);
+</script>
+</body>
+</html>
