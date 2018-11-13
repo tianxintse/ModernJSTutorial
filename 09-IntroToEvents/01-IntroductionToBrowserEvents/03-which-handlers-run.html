@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <input type="button" id="button" value="Click to test" />
+    <script>
+        // The handler button.onclick works independently and in addition to addEventListener.
+        let button = document.getElementById("button");
+        button.addEventListener("click", () => alert("1"));
+        button.removeEventListener("click", () => alert("1"));
+        button.onclick = () => alert(2);
+    </script>
+</body>
+</html>
