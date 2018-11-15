@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="elem">Autoclick</button>
+<script>
+    "use strict";
+
+    elem.onclick = function(event) {
+        if (!event.isTrusted) {
+            alert('Triggered by script');
+        } else {
+            alert('Triggered by user');
+        }
+    };
+
+    let event = new Event('click');
+    elem.dispatchEvent(event);
+</script>
+</body>
+</html>
