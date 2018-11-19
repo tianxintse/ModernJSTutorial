@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .error {
+        background: red;
+    }
+</style>
+</head>
+
+<body>
+    Your email please: <input type="email" id="input">
+    <input type="text" style="width:220px" placeholder="make email invalid and try to focus here">
+
+    <script>
+        let input = document.getElementById('input');
+        input.onblur = function () {
+            if (!input.value.includes('@')) {
+                input.classList.add('error');
+                input.focus();
+            } else {
+                input.classList.remove('error');
+            }
+        };
+    </script>
+</body>
+
+</html>
