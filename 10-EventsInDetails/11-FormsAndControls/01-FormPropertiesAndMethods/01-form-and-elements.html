@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <form name="my">
+    <input name="one" value="1"></input>
+    <input name="two" value="2"></input>
+  </form>
+  <script>
+    let form = document.forms.my;
+    let elem = form.elements.one;
+    alert(elem.value);
+  </script>
+
+  <form>
+    <input type="radio" name="age" value="10">
+    <input type="radio" name="age" value="20">
+  </form>
+
+  <script>
+    form = document.forms[1];
+    let ageElems = form.elements.age;
+    alert(ageElems[0].value)
+  </script>
+</body>
+
+</html>
